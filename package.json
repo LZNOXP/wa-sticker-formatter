@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc -p .",
+    "tsc" : "tsc -p .",
+    "build": "npm run tsc",
     "doc": "typedoc",
     "lint": "eslint \"src/**/*.ts\"",
     "prepublish": "npm run build",
