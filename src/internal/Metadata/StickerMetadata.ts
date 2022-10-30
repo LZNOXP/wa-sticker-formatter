@@ -8,11 +8,12 @@ export default class StickerMetadata implements IStickerOptions {
         public pack = '',
         public author = '',
         public categories: Categories[] = [],
-        public id = Utils.generateStickerID()
+        public id = Utils.generateStickerID(),
+        public playstoreLink = ''
     ) {}
 
     static from = (object: Partial<StickerMetadata>): StickerMetadata => {
-        return new StickerMetadata(object.pack, object.author, object.categories, object.id)
+        return new StickerMetadata(object.pack, object.author, object.categories, object.id, object.playstoreLink)
     }
 
     public setPack = (title: string): this => {

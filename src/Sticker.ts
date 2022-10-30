@@ -127,6 +127,19 @@ export class Sticker {
     }
 
     /**
+     * Set playstore link
+     * @param link Link to a playstore application
+     * @returns {this}
+     * @example
+     * const sticker = new Sticker('./image.png')
+     * sticker.setPlaystoreLink('https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf')
+     */
+    public setPlaystoreLink = (link: string): this => {
+        this.metadata.playstoreLink = link
+        return this
+    }
+
+    /**
      * Set the sticker category
      * @param categories - Sticker Category
      * @returns {this}

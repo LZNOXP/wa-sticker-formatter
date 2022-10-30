@@ -11,6 +11,8 @@ export interface IStickerConfig {
     id?: string
     /** Sticker Category*/
     categories?: Categories[]
+    /** Link to a playstore application */
+    playstoreLink?: string
 }
 
 export interface IStickerOptions extends IStickerConfig {
