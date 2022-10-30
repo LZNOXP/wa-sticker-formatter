@@ -8,7 +8,6 @@ Wa-Sticker-Formatter is a simple tool which allows you to create and format What
 
 [![NPM](https://img.shields.io/npm/l/wa-sticker-formatter?style=flat-square&label=License)](https://github.com/AlenSaito1/wa-sticker-formatter/blob/master/LICENSE) [![CodeFactor](https://img.shields.io/codefactor/grade/github/alensaito1/wa-sticker-formatter?style=flat-square&label=Code%20Quality)](https://www.codefactor.io/repository/github/alensaito1/wa-sticker-formatter) [![NPM](https://img.shields.io/npm/dw/wa-sticker-formatter?style=flat-square&label=Downloads)](https://npmjs.com/package/wa-sticker-formatter)
 
-
 </div>
 
 # Installation
@@ -42,6 +41,7 @@ Before using the library, you need to import it.
 import { Sticker, createSticker, StickerTypes } from 'wa-sticker-formatter' // ES6
 // const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter') // CommonJS
 ```
+
 ## Using The `Sticker` constructor (Recommended)
 
 ```TS
@@ -81,6 +81,7 @@ const buffer = await new Sticker(image)
 The `image` (first parameter) can be a Buffer, URL, SVG string, or File path.
 
 ### SVG Example
+
 ```TS
 const sticker = new Sticker(`
     <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
@@ -127,22 +128,25 @@ Sticker types are exported as an enum.
 enum StickerTypes {
     DEFAULT = 'default',
     CROPPED = 'crop',
-    FULL = 'full'
+    FULL = 'full',
+    CIRCLE = 'circle',
+    ROUNDED = 'rounded'
 }
-
 ```
 
 ## Background
 
 Background can be a hex color string or a sharp color object.
+
 ```JSON
 {
     "background": "#FFFFFF"
 }
 ```
-or 
 
-```JSON  
+or
+
+```JSON
 {
     "background": {
         "r": 255,
@@ -170,8 +174,8 @@ This is actually [Exif](https://en.wikipedia.org/wiki/Exif) Metadata embedded in
 
 This is an array of Emojis. [Learn More](https://github.com/WhatsApp/stickers/wiki/Tag-your-stickers-with-Emojis)
 
-
 ### Extracting Metadata
+
 To extract the metadata from the WebP file, you can use the `extractMetadata()` function.
 
 ```TS
@@ -187,6 +191,5 @@ metadata = await Sticker.extractMetadata(sticker)
 ```
 
 ---
+
 Thanks for using Wa-Sticker-Formatter!
-
-
