@@ -2,8 +2,8 @@
   "name": "wa-sticker-formatter",
   "version": "4.3.2",
   "description": "Sticker Creator for WhatsApp",
-  "main": "dist",
-  "types": "dist",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -13,6 +13,7 @@
     "build:all": "tsc && typedoc",
     "build:docs": "typedoc",
     "build:tsc": "tsc",
+    "build": "tsc",
     "doc": "typedoc",
     "lint": "eslint \"src/**/*.ts\"",
     "prepublish": "npm run build",
